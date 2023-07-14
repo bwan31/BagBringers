@@ -4,7 +4,7 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = windowHeight/2.5;
+      var elementVisible = windowHeight/7;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
@@ -20,9 +20,9 @@ function reveal() {
 
 var lastScrollTop = 0;
 
-const vision = document.querySelector(".reveal");
+const vision = document.getElementsByClassName("reveal");
 if (vision != null) {
-    console.log("not null")
+    console.log(vision.item(0))
 }
 else {
     console.log("Null")
